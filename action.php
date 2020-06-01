@@ -90,20 +90,20 @@ if(isset($_GET['edit'])){
 
   
 
-       // $oldimage=$_POST['oldimage'];
-    /* if(isset($_FILES['image']['name'])&&($_FILES['image']['name']!="")){
-        $newimage=$_FILES["image"]["name"];
+       $oldimage=$_POST['oldimage'];
+     if(isset($_FILES['image']['name'])&&($_FILES['image']['name']!="")){
+        $newimage="img/".$_FILES["image"]["name"];
         unlink($oldimage);
         move_uploaded_file($_FILES['image']['name'],$newimage);
     } else{
         $newimage=$oldimage;
     }
    
-        */
-        $query="UPDATE  user SET name=?, email=?, phone=? WHERE id=?";
+        
+        $query="UPDATE  user SET name=?, email=?, phone=? ,image=? WHERE id=?";
 
         $stmt=$conn->prepare($query);
-        $stmt->bind_param('sssi', $name, $email, $phone, $id);
+        $stmt->bind_param('ssssi', $name, $email, $phone,$newimage, $id);
    
          $stmt->execute();
         
