@@ -17,7 +17,12 @@ if(isset($_POST['add'])){
 
     $image=$_FILES['image']['name'];
     $tmp_name=$_FILES["image"]["tmp_name"];
-    $upload=("img/".$image);
+    
+    $upload='img/'.$image;
+
+
+
+    move_uploaded_file($tmp_name,$upload.$image);
    
    
     $query= "INSERT INTO user( name, email,phone,image) VALUES(?,?,?,?)";
@@ -27,8 +32,8 @@ if(isset($_POST['add'])){
    
     $stmt->execute();
 
-     move_uploaded_file($tmp_name,$upload.$image);
-      $_SERVER['DOCUMENT_ROOT'].$upload.$image;
+     
+     
 
     header('location:index.php');
 
