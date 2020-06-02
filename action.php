@@ -19,10 +19,7 @@ if(isset($_POST['add'])){
     $tmp_name=$_FILES["image"]["tmp_name"];
     
     $upload='img/'.$image;
-
-
-
-    move_uploaded_file($tmp_name,$upload.$image);
+    move_uploaded_file($tmp_name,$upload);
    
    
     $query= "INSERT INTO user( name, email,phone,image) VALUES(?,?,?,?)";

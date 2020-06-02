@@ -89,7 +89,7 @@ function pre_r($array) {
                         <tbody>
                             <tr>
                                 <td><?php  echo $row['id'];?></td>
-                                <td><img src= "<?php echo $row['image'] ?>" width="25px"></td>
+                                <td><img src= "<?php echo $row['image']; ?>" width="25px"></td>
                                 <td><?php  echo $row['name'];?></td>
                                 <td><?php  echo $row['email'];?></td>
                                 <td><?php  echo $row['phone'];?></td>
