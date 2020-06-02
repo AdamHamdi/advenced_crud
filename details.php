@@ -1,7 +1,7 @@
 <style>
     .jumbotron {
-  width: 50%;
-  height: 80%;
+  width: 40%;
+  height: 88%;
   display: grid;
   justify-content: center;
   margin: 50px 30px 30px 25%;
@@ -14,7 +14,28 @@
 
 </style>
 <?php 
-include('nav.php')?>
+include('nav.php');
+include('action.php');
+if(isset($_GET['detail'])){
+    $id=$_GET['detail'];
+
+    $query= "SELECT * FROM user WHERE id=?";
+     
+    $stmt=$conn->prepare($query);
+    $stmt->bind_param('i',$id);
+    $stmt->execute();
+    $result= $stmt->get_result();
+    $row=$result->fetch_assoc();
+
+    $vid=$row['id'];
+    $vname=$row['name'];
+    $vemail=$row['email'];
+    $vphone=$row['phone'];
+    $vimage=$row['image'];
+
+
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,20 +48,17 @@ include('nav.php')?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body style="background:#f1f2f6">
-      <div class="jumbotron ">
-          <?php
-      while($row=($stmt->fetch_assoc())){?>
+      <div class="jumbotron bg-info">
           <div class="container">
-          
-              <h3 class="display-3">User's Details</h3>
-              <button class="btn btn-block btn-info">ID:# <?php  echo $row['id'];?></button><br>
-              <img src="<?=$row['image'];?>" width="25">
+              <h4 class="display-4 text-light" style="font-family:sans-serif;">User's Details</h4>
+              <b><p class="bg-light p-2 rounded text-center text-dark">ID :<?php echo $vid;?></p></b><br>
+              <p class="text-center"><img src="<?php echo $vimage;?>" width="180"></p>
               <hr class="my-2">
-              <h5 >Name:<?php  echo $row['name'];?></h5>
-              <h5>Email:<?php  echo $row['email'];?></h5>
-              <h5>Phone:<?php  echo $row['phone'];?></h5>
+              <h5 class="display-5 text-light" style="color:black;">Name : <?php echo $vname;?></h5>
+              <h5 class="display-5 text-light" style="color:black;">Email : <?php echo $vemail;?></h5>
+              <h5  class="display-5 text-light" style="color:black;">Phone : <?php echo $vphone;?></h5>
           </div>
-          <?php } ?>
+          
       </div>
       
     <!-- Optional JavaScript -->

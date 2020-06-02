@@ -94,9 +94,9 @@ function pre_r($array) {
                                 <td><?php  echo $row['email'];?></td>
                                 <td><?php  echo $row['phone'];?></td>
                                 <td>
-                                    <a href="details.php?<?php echo $row['id'];?>" class='btn btn-sm btn-info' name="detail">Details</a>
-                                    <a href="index.php?edit=<?php echo $row['id']?>" class='btn btn-sm btn-success' name="edit">Edit</a>
-                                    <a href="action.php?delete=<?php echo $row['id'];?>" class='btn btn-sm btn-danger' onclick="return confirm('Do you want to delete this record')" name="delete">Delete</a>
+                                    <a href="details.php?detail=<?= $row['id'];?>" class='btn btn-sm btn-info' name="detail">Details</a>
+                                    <a href="index.php?edit=<?= $row['id']?>" class='btn btn-sm btn-success' name="edit">Edit</a>
+                                    <a href="action.php?delete=<?= $row['id'];?>" class='btn btn-sm btn-danger' onclick="return confirm('Do you want to delete this record')" name="delete">Delete</a>
                                     
                                 </td>
                                 

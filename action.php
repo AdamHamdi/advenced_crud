@@ -115,15 +115,6 @@ if(isset($_GET['edit'])){
         header('location:index.php');
     }    
 
-if(isset($_GET['detail'])){
-    $id=$_GET['detail'];
-
-    $query= "SELECT FROM user WHERE id=$id";
-     
-    $stmt=$conn->prepare($query);
-    $stmt->bind_param('i',$id);
-    $stmt->execute();
-
-    header('location:index.php');}
+    
 
 ?>
