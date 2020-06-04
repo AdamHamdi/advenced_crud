@@ -9,13 +9,13 @@ $update=false;
     $image="";
 
 if(isset($_POST['add'])){
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $phone=$_POST['phone'];
+    $name=strip_tags($_POST['name']);
+    $email=strip_tags($_POST['email']);
+    $phone=strip_tags($_POST['phone']);
 
   
 
-    $image=$_FILES['image']['name'];
+    $image=strip_tags($_FILES['image']['name']);
     $tmp_name=$_FILES["image"]["tmp_name"];
     
     $upload='img/'.$image;
@@ -85,10 +85,10 @@ if(isset($_GET['edit'])){
 
     }
     if(isset($_POST['update'])){
-        $id= $_POST['id'];
-        $name=$_POST['name'];
-        $email=$_POST['email'];
-        $phone=$_POST['phone'];
+        $id= strip_tags($_POST['id']);
+        $name=strip_tags($_POST['name']);
+        $email=strip_tags($_POST['email']);
+        $phone=strip_tags($_POST['phone']);
 
   
 
