@@ -507,10 +507,10 @@
           </div>
             
           </div>
-   
+		  <br><br>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="subject" class="col-md-1">Subject :</label>
+    <textarea id="subject" name="subject" class ="col-md-3" placeholder="Write something.." style="height:200px"></textarea>
 
     <input type="submit" class="btn btn-block btn-success" value="Submit">
 
