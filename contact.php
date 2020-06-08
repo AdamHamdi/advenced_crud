@@ -29,7 +29,7 @@ require 'nav.php';
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <b><p style="font-size:20px">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p></b>
         </div>
       </div>
 
@@ -104,7 +104,7 @@ require 'nav.php';
 	  <footer id="footer" style="background:black;height:25%; color:white;">
     <div class="container">
 		<br>
-      <h3 class="text-center" style="font-size:50px;">KnightOne</h3><br>
+      <h3 class="text-center" style="font-size:50px;">PRODEV</h3><br>
       <p class="text-center">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links offset-md-5">
         <a href="#" class="twitter"style="color:#009961;font-size: 2.73em;"><i class="bx bxl-twitter"></i></a>
@@ -114,7 +114,7 @@ require 'nav.php';
         <a href="#" class="linkedin"style="color:#009961;font-size: 2.73em;"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright text-center">
-        &copy; Copyright <strong><span >KnightOne</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span >PRODEV</span></strong>. All Rights Reserved
       </div>
       <div class="credits text-center">
         <!-- All the links in the footer should remain intact. -->
