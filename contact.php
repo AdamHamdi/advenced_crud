@@ -44,21 +44,21 @@ require 'nav.php';
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
-                <i class="ri-map-pin-line"></i>
+                <i class="ri-map-pin-line" style="color:#009961;font-size: 1.73em;"></i>
                 <h4>Location:</h4>
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
 
               <div class="email">
-                <i class="ri-mail-line"></i>
+                <i class="ri-mail-line" style="color:#009961;font-size: 1.73em;"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>prodev.webdesign@gmail.com</p>
               </div>
 
               <div class="phone">
-                <i class="ri-phone-line"></i>
+                <i class="ri-phone-line" style="color:#009961;font-size: 1.73em;"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+216 27 434 822</p>
               </div>
 
             </div>
@@ -91,7 +91,8 @@ require 'nav.php';
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center sent-message"><button type="submit">Send Message</button></div>
+			  <div class="text-center "><button type="submit" 	class="
+			  sent-message btn  "style="background:#009961;color:white;border-radius: 25px;" >Send Message</button></div>
             </form>
 
           </div>
@@ -99,21 +100,23 @@ require 'nav.php';
         </div>
 
 	  </div>
-	  <footer id="footer">
+	  <br><br><br>
+	  <footer id="footer" style="background:black;height:25%; color:white;">
     <div class="container">
-      <h3>KnightOne</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+		<br>
+      <h3 class="text-center" style="font-size:50px;">KnightOne</h3><br>
+      <p class="text-center">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links offset-md-5">
+        <a href="#" class="twitter"style="color:#009961;font-size: 2.73em;"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook" style="color:#009961;font-size: 2.73em;"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram" style="color:#009961;font-size: 2.73em;"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"style="color:#009961;font-size: 2.73em;"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"style="color:#009961;font-size: 2.73em;"><i class="bx bxl-linkedin"></i></a>
       </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>KnightOne</span></strong>. All Rights Reserved
+      <div class="copyright text-center">
+        &copy; Copyright <strong><span >KnightOne</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <div class="credits text-center">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
