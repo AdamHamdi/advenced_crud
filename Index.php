@@ -27,6 +27,7 @@ function pre_r($array) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body style="background:#f1f2f6">
@@ -43,7 +44,7 @@ function pre_r($array) {
                 <h3 style="font-family:sans-serif;" class="text-info">Add Record</h3>  
                 <form action="action.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $id;?>">
-                <div class="form-group">
+                    <div class="form-group">
                         
                         <input  class="form-control required  " type="text" name="name" value="<?php echo $name;?>" required placeholder="User Name">
                     </div>
@@ -58,8 +59,8 @@ function pre_r($array) {
                     <div class="form-group">
                         
                         <input type="hidden" name="oldimage" value="<?php echo $image;?>">
-                    <input type="file"  class="custom-file" name="image" >
-                    <img src="<?php echo $image;?>" width="120" class="img-fluid img-thumbnail">
+                        <input type="file"  class="custom-file" name="image" >
+                        <img src="<?php echo $image;?>" width="120" class="img-fluid img-thumbnail">
                     </div>
                     <div class="form-group">
                     <?php if($update==true){ ?>
@@ -94,9 +95,9 @@ function pre_r($array) {
                                 <td><?php  echo $row['email'];?></td>
                                 <td><?php  echo $row['phone'];?></td>
                                 <td>
-                                    <a href="details.php?detail=<?= $row['id'];?>" class='btn btn-sm btn-info' name="detail">Details</a>
-                                    <a href="index.php?edit=<?= $row['id']?>" class='btn btn-sm btn-success' name="edit">Edit</a>
-                                    <a href="action.php?delete=<?= $row['id'];?>" class='btn btn-sm btn-danger' onclick="return confirm('Do you want to delete this record')" name="delete">Delete</a>
+                                    <a href="details.php?detail=<?= $row['id'];?>" class='btn btn-sm btn-info' name="detail"> <i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="index.php?edit=<?= $row['id']?>" class='btn btn-sm btn-success' name="edit"> <i class="fas fa-edit"></i> Edit</a>
+                                    <a href="action.php?delete=<?= $row['id'];?>" class='btn btn-sm btn-danger' onclick="return confirm('Do you want to delete this record')" name="delete"> <i class="far fa-trash-alt"></i> Delete</a>
                                     
                                 </td>
                                 

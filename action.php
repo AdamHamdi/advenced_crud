@@ -13,8 +13,6 @@ if(isset($_POST['add'])){
     $email=strip_tags($_POST['email']);
     $phone=strip_tags($_POST['phone']);
 
-  
-
     $image=strip_tags($_FILES['image']['name']);
     $tmp_name=$_FILES["image"]["tmp_name"];
     
@@ -42,13 +40,19 @@ if(isset($_GET['delete'])){
     $id=$_GET['delete'];
 // delete image from img folder
     $sql="SELECT image FROM user WHERE id=?";
+    // Prépare une requête SQL pour l'exécution
     $stmt2=$conn->prepare($sql);
+    //The PDOStatement::bindParam() function is an inbuilt function in PHP which is used to bind a parameter to the specified variable name. This function bound the variables, pass their value as input and receive the output value, if any, of their associated parameter
     $stmt2->bind_param('i',$id);
+    //The PHP Execute command can be used to execute a PHP script or function.
     $stmt2->execute();
+    //Call to return a result set from a prepared statement query.
     $result2=$stmt2-> get_result();
+    //The fetch_assoc() / mysqli_fetch_assoc() function fetches a result row as an associative array. 
     $row=$result2->fetch_assoc();
 
     $imagepath=$row['image'];
+    //The unlink() function is an inbuilt function in PHP which is used to delete files.
     unlink($imagepath);
 
 
