@@ -36,6 +36,8 @@ if(isset($_POST['add'])){
     $_SESSION['message']="L'insertion a été effectuée avec success";
     $_SESSION['msg_type']="success";
 } 
+
+//////////////////////////delete
 if(isset($_GET['delete'])){
     $id=$_GET['delete'];
 // delete image from img folder
@@ -61,13 +63,14 @@ if(isset($_GET['delete'])){
     $stmt=$conn->prepare($query);
     $stmt->bind_param('i',$id);
     $stmt->execute();
-
+//en haut de l'interface
     header('location:index.php');
  //message de confirmation
  $_SESSION['message']="the record has been deleted successfully";
  $_SESSION['msg_type']="danger";
   
 }
+//////////////////////////////// edit ////////////////////////////////////////////////
 if(isset($_GET['edit'])){
     $id=$_GET['edit'];
 

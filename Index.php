@@ -66,7 +66,7 @@ function pre_r($array) {
                     <?php if($update==true){ ?>
                     <input name="update" type="submit" class="btn btn-warning btn-block" value="Update Record">
                     <?php } else { ?>
-                        <input type='submit' class="btn btn-info btn-block" name="add" value="Add Record">
+                        <button type='submit' class="btn btn-info btn-block" name="add" value=""><i class="fas fa-plus-circle"></i> Add Record</button>
                     <?php }?>
                     </div>
                     </form>            
