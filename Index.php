@@ -40,7 +40,7 @@ function pre_r($array) {
        </div>
        <?php } unset($_SESSION['message']); ?>
           <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <h3 style="font-family:sans-serif;" class="text-info">Add Record</h3>  
                 <form action="action.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $id;?>">
@@ -71,7 +71,7 @@ function pre_r($array) {
                     </div>
                     </form>            
               </div>
-              <div class="col-md-9 ">
+              <div class="col-md-8 ">
               <h3 class="text-info" style="font-family:sans-serif;text-align:center;">Records in database :</h3>
               <table class="table table-striped">
                         <thead  class="thead-light">
@@ -96,7 +96,7 @@ function pre_r($array) {
                                 <td><?php  echo $row['phone'];?></td>
                                 <td>
                                     <a href="details.php?detail=<?= $row['id'];?>" class='btn btn-sm btn-info' name="detail"> <i class="fas fa-info-circle"></i> Details</a>
-                                    <a href="index.php?edit=<?= $row['id']?>" class='btn btn-sm btn-success' name="edit"> <i class="fas fa-edit"></i> Edit</a>
+                                    <a href="index.php?edit=<?= $row['id']?>" class='btn btn-sm btn-warning' name="edit"> <i class="fas fa-edit"></i> Edit</a>
                                     <a href="action.php?delete=<?= $row['id'];?>" class='btn btn-sm btn-danger' onclick="return confirm('Do you want to delete this record')" name="delete"> <i class="far fa-trash-alt"></i> Delete</a>
                                     
                                 </td>
